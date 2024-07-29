@@ -1,4 +1,6 @@
 .venv
+data/
+client_secrets.json
 
 # SQL Server files
 *.mdf

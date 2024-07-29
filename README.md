@@ -1,3 +1,6 @@
+## Get data form Reddit API
+https://www.jcchouinard.com/reddit-api/
+
 ## Day 4 - Thu
 Scaling theory is a new field (~10 years), and right now it accounts for a lot of noise, but it is evolving on how to flatten up the curves.
 Doing interdisciplinary research is difficult, because the researchers want to do different things and somethimes methods are really diverse. So not anything "calls you". Is there danger in there or is it just a defense mechanism?
