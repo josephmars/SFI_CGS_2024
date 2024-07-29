@@ -1,1 +1,5 @@
 .venv
+
+# SQL Server files
+*.mdf
+*.ldf
