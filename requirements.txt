@@ -1,0 +1,7 @@
+bertopic
+sentence-transformers
+pandas
+datetime
+requests
+scikit-learn
+nbformat
