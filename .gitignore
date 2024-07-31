@@ -2,6 +2,9 @@
 data/
 client_secrets.json
 
+#Models
+code/bertopic_model
+
 # SQL Server files
 *.mdf
 *.ldf
