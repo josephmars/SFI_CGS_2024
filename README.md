@@ -1,5 +1,8 @@
 ## Get data form Reddit API
 https://www.jcchouinard.com/reddit-api/
+Since the API limits in the number of posts and comments we can get, we decided to use the Archive of Reddit. We need to use Torrent to download the data (predicted to be ~2TB).
+[2005-2023](https://academictorrents.com/details/9c263fc85366c1ef8f5bb9da0203f4c8c8db75f4)
+[All](https://github.com/ArthurHeitmann/arctic_shift/blob/master/download_links.md)
 
 ## Day 4 - Thu
 Scaling theory is a new field (~10 years), and right now it accounts for a lot of noise, but it is evolving on how to flatten up the curves.
