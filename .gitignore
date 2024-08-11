@@ -1,6 +1,10 @@
+# Virtual environment
 .venv
-data/
 client_secrets.json
+
+# Large data files
+data/reddit/comments
+data/reddit/submissions
 
 #Models
 code/bertopic_model
