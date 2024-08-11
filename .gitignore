@@ -5,6 +5,9 @@ client_secrets.json
 # Large data files
 data/reddit/comments
 data/reddit/submissions
+data/1000_per_subreddit
+data/2000_per_subreddit
+data/*.xlsx
 
 #Models
 code/bertopic_model
