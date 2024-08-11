@@ -1,10 +1,33 @@
+**to do**
+- [ ] Download all the posts
+- [ ] Split all the posts
+- [ ] Upload all the posts
+- [ ] Process all the posts
+
+**maybe**
+- [ ] Download all the comments
+
+
 ## Get data form Reddit API
 https://www.jcchouinard.com/reddit-api/
 Since the API limits in the number of posts and comments we can get, we decided to use the Archive of Reddit. We need to use Torrent to download the data (predicted to be ~2TB).
-To extract the data from Reddit using `academictorrents` in the Wahab cluster: https://academictorrents.com/docs/downloading.html. Use the command `at-get 9c263fc85366c1ef8f5bb9da0203f4c8c8db75f4`
+To extract the data from Reddit using _academictorrents_ in the Wahab cluster: https://academictorrents.com/docs/downloading.html. Use the command `at-get 9c263fc85366c1ef8f5bb9da0203f4c8c8db75f4`
 
 [2005-2023](https://academictorrents.com/details/9c263fc85366c1ef8f5bb9da0203f4c8c8db75f4)
 [All](https://github.com/ArthurHeitmann/arctic_shift/blob/master/download_links.md)
+
+
+### Download data and upload to HPC 
+  1. Command used to split files in Windows: https://github.com/anseki/split-win/tree/master. Download the .cmd and .ps1 files to System32/. 
+  2. Use the command `split D:\REDDIT_DATA\reddit\submissions\RS_2023-12.zst -size 1gb` to split the files. HPC's limit is 10GB, uploading 1GB parts works the best.
+  3. In the HPC Create a folder with the name of the file and upload all the parts there. For instance `RS_2023-12/`
+  4. Use the command `cat /home/jmart130/GitHub/SFI_CGS_2024/data/reddit/submissions/RS_2023-12/* > /home/jmart130/GitHub/SFI_CGS_2024/data/reddit/submissions/RS_2023-12.zst` to join the files in the HPC files.
+
+### Data preprocessing
+Use the files from this [repository](https://github.com/Watchful1/PushshiftDumps) to preprocess the data.
+     1. `single_file.py` decompresses and iterates over a single zst compressed file
+     2. `iterate_folder.py` does the same, but for all files in a folder
+
 
 ## Day 4 - Thu
 Scaling theory is a new field (~10 years), and right now it accounts for a lot of noise, but it is evolving on how to flatten up the curves.
