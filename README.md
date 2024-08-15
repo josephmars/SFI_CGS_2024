@@ -1,11 +1,8 @@
 **to do**
-- [ ] Download all the posts
-- [ ] Split all the posts
-- [ ] Upload all the posts
+- [x] Download all the posts
+- [x] Split all the posts
+- [x] Upload all the posts
 - [ ] Process all the posts
-
-**maybe**
-- [ ] Download all the comments
 
 
 ## Get data form Reddit API
@@ -27,6 +24,9 @@ To extract the data from Reddit using _academictorrents_ in the Wahab cluster: h
 Use the files from this [repository](https://github.com/Watchful1/PushshiftDumps) to preprocess the data.
      1. `single_file.py` decompresses and iterates over a single zst compressed file
      2. `iterate_folder.py` does the same, but for all files in a folder
+     3. 
+     Queries:
+      - `python combine_folder_multiprocess.py reddit/submissions --field subreddit --value careerguidance --output pushshift2 --processes 20 --file_filter "^RS_2024-07"`
 
 
 ## Day 4 - Thu

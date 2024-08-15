@@ -18,9 +18,9 @@ import logging.handlers
 
 
 # put the path to the input file
-input_file_path = r"/home/jmart130/GitHub/SFI_CGS_2024/data/reddit/submissions/RS_2023-12.zst"
+input_file_path = r"/home/jmart130/GitHub/SFI_CGS_2024/data/careerguidance_all/careerguidance_submissions.zst"
 # put the path to the output file, with the csv extension
-output_file_path = r"/home/jmart130/GitHub/SFI_CGS_2024/data/reddit/submissions/RS_2023-12.csv"
+output_file_path = input_file_path.replace(".zst",".csv")
 # if you want a custom set of fields, put them in the following list. If you leave it empty the script will use a default set of fields
 fields = []
 
@@ -76,7 +76,7 @@ if __name__ == "__main__":
 	is_submission = "submission" in input_file_path
 	if not len(fields):
 		if is_submission:
-			fields = ["author","title","score","created","link","text","url"]
+			fields = ["author","title","score","created","link","text","url", "subreddit"]
 		else:
 			fields = ["author","score","created","link","body"]
 
