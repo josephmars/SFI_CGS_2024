@@ -15,12 +15,20 @@ cd /d data
 rmdir /s /q pushshift_working
 
 :: Run the Python scripts
-python combine_folder_multiprocess.py reddit\submissions --field subreddit --value antiwork,AskReddit,careerguidance,changemyview,Economics,Futurology,jobs,NoStupidQuestions,Showerthoughts,technology --output all_subreddits_2024-07 --file_filter "^RS_2024-07"
+python combine_folder_multiprocess.py reddit\submissions --field subreddit --value antiwork,AskReddit,careerguidance,changemyview,Economics,Futurology,jobs,NoStupidQuestions,Showerthoughts,technology --output all_subreddits_2024-02 --file_filter "^RS_2024-02"
 rmdir /s /q pushshift_working
 
-python combine_folder_multiprocess.py reddit\submissions --field subreddit --value antiwork,AskReddit,careerguidance,changemyview,Economics,Futurology,jobs,NoStupidQuestions,Showerthoughts,technology --output all_subreddits_2024-03 --file_filter "^RS_2024-03"
+python combine_folder_multiprocess.py reddit\submissions --field subreddit --value antiwork,AskReddit,careerguidance,changemyview,Economics,Futurology,jobs,NoStupidQuestions,Showerthoughts,technology --output all_subreddits_2024-01 --file_filter "^RS_2024-01"
 rmdir /s /q pushshift_working
 
+python combine_folder_multiprocess.py reddit\submissions --field subreddit --value antiwork,AskReddit,careerguidance,changemyview,Economics,Futurology,jobs,NoStupidQuestions,Showerthoughts,technology --output all_subreddits_2022-08 --file_filter "^RS_2022-08"
+rmdir /s /q pushshift_working
+
+python combine_folder_multiprocess.py reddit\submissions --field subreddit --value antiwork,AskReddit,careerguidance,changemyview,Economics,Futurology,jobs,NoStupidQuestions,Showerthoughts,technology --output all_subreddits_2022-09 --file_filter "^RS_2022-09"
+rmdir /s /q pushshift_working
+
+python combine_folder_multiprocess.py reddit\submissions --field subreddit --value antiwork,AskReddit,careerguidance,changemyview,Economics,Futurology,jobs,NoStupidQuestions,Showerthoughts,technology --output all_subreddits_2022-10 --file_filter "^RS_2022-10"
+rmdir /s /q pushshift_working
 
 :: End
 endlocal
