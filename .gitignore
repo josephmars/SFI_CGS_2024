@@ -11,6 +11,7 @@ data/reddit/submissions
 data/1000_per_subreddit
 data/2000_per_subreddit
 data/*.xlsx
+data/pushshift_working/
 
 #Models
 code/bertopic_model
