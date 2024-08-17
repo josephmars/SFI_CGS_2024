@@ -26,7 +26,8 @@ Use the files from this [repository](https://github.com/Watchful1/PushshiftDumps
      2. `iterate_folder.py` does the same, but for all files in a folder
      3. 
      Queries:
-      - `python combine_folder_multiprocess.py reddit/submissions --field subreddit --value careerguidance --output pushshift2 --processes 20 --file_filter "^RS_2024-07"`
+      - Getting 1 subreddit: `python combine_folder_multiprocess.py reddit/submissions --field subreddit --value careerguidance --output pushshift2 --processes 20 --file_filter "^RS_2024-07"`
+      - Getting all subreddits: `python combine_folder_multiprocess.py reddit/submissions --field subreddit --value anti-work,AskReddit,careerguidance,changemyview,Economics,Futurology,jobs,NoStupidQuestions,Showerthoughts,technology --output all_subreddits_2024-04 --file_filter "^RS_2024-04"`
 
 
 ## Day 4 - Thu
