@@ -275,3 +275,62 @@
 2024-08-17 13:08:10,361 - INFO: 22,000,000 lines at 17,709/s, 0 errored, 140,655 matched : 9.47 gb at 8 mb/s, 54% : 0(0)/1 files : 0:18:20 remaining
 2024-08-17 13:09:11,146 - INFO: 23,000,000 lines at 17,650/s, 0 errored, 146,962 matched : 9.88 gb at 8 mb/s, 57% : 0(0)/1 files : 0:17:20 remaining
 2024-08-17 13:10:08,166 - INFO: 24,000,000 lines at 17,645/s, 0 errored, 153,544 matched : 10.32 gb at 8 mb/s, 59% : 0(0)/1 files : 0:16:17 remaining
+2024-08-17 13:11:10,958 - INFO: 25,000,000 lines at 17,569/s, 0 errored, 160,397 matched : 10.74 gb at 8 mb/s, 62% : 0(0)/1 files : 0:15:19 remaining
+2024-08-17 13:12:15,200 - INFO: 26,000,000 lines at 17,483/s, 0 errored, 166,508 matched : 11.18 gb at 8 mb/s, 64% : 0(0)/1 files : 0:14:17 remaining
+2024-08-17 13:13:13,035 - INFO: 27,000,000 lines at 17,476/s, 0 errored, 172,564 matched : 11.61 gb at 8 mb/s, 67% : 0(0)/1 files : 0:13:18 remaining
+2024-08-17 13:14:16,661 - INFO: 28,000,000 lines at 17,406/s, 0 errored, 178,827 matched : 12.03 gb at 8 mb/s, 69% : 0(0)/1 files : 0:12:19 remaining
+2024-08-17 13:15:10,723 - INFO: 29,000,000 lines at 17,442/s, 0 errored, 185,069 matched : 12.45 gb at 8 mb/s, 71% : 0(0)/1 files : 0:11:21 remaining
+2024-08-17 13:16:04,230 - INFO: 30,000,000 lines at 17,480/s, 0 errored, 191,204 matched : 12.87 gb at 8 mb/s, 74% : 0(0)/1 files : 0:10:22 remaining
+2024-08-17 13:17:02,168 - INFO: 31,000,000 lines at 17,473/s, 0 errored, 197,285 matched : 13.30 gb at 8 mb/s, 76% : 0(0)/1 files : 0:09:23 remaining
+2024-08-17 13:17:55,807 - INFO: 32,000,000 lines at 17,508/s, 0 errored, 203,479 matched : 13.73 gb at 8 mb/s, 79% : 0(0)/1 files : 0:08:24 remaining
+2024-08-17 13:18:48,808 - INFO: 33,000,000 lines at 17,546/s, 0 errored, 209,787 matched : 14.16 gb at 8 mb/s, 81% : 0(0)/1 files : 0:07:26 remaining
+2024-08-17 13:19:46,506 - INFO: 34,000,000 lines at 17,540/s, 0 errored, 215,825 matched : 14.58 gb at 8 mb/s, 84% : 0(0)/1 files : 0:06:27 remaining
+2024-08-17 13:20:40,187 - INFO: 35,000,000 lines at 17,569/s, 0 errored, 221,938 matched : 15.01 gb at 8 mb/s, 86% : 0(0)/1 files : 0:05:29 remaining
+2024-08-17 13:21:31,563 - INFO: 36,000,000 lines at 17,617/s, 0 errored, 227,802 matched : 15.42 gb at 8 mb/s, 88% : 0(0)/1 files : 0:04:32 remaining
+2024-08-17 13:22:24,890 - INFO: 37,000,000 lines at 17,645/s, 0 errored, 234,087 matched : 15.85 gb at 8 mb/s, 91% : 0(0)/1 files : 0:03:34 remaining
+2024-08-17 13:23:18,966 - INFO: 38,000,000 lines at 17,667/s, 0 errored, 239,940 matched : 16.27 gb at 8 mb/s, 93% : 0(0)/1 files : 0:02:37 remaining
+2024-08-17 13:24:13,069 - INFO: 39,000,000 lines at 17,687/s, 0 errored, 246,273 matched : 16.70 gb at 8 mb/s, 96% : 0(0)/1 files : 0:01:38 remaining
+2024-08-17 13:25:05,950 - INFO: 40,000,000 lines at 17,813/s, 0 errored, 252,460 matched : 17.13 gb at 8 mb/s, 98% : 0(0)/1 files : 0:00:40 remaining
+2024-08-17 13:25:47,589 - INFO: 40,701,691 lines at 17,840/s, 0 errored, 256,930 matched : 17.43 gb at 8 mb/s, 100% : 1(0)/1 files : 0:00:00 remaining
+2024-08-17 13:25:47,608 - INFO: 40,701,691, 0 errored : 17.43 gb, 100% : 1/1
+2024-08-17 13:25:47,609 - INFO: Processing complete, combining 1 result files
+2024-08-17 13:25:47,609 - INFO: From 0/1 files to 0 output handles : 0/256,930 lines
+2024-08-17 13:25:59,518 - INFO: From 1/1 files to 0 output handles : 256,930/256,930 lines
+2024-08-17 16:48:03,470 - INFO: Loading files from: reddit\submissions
+2024-08-17 16:48:03,470 - INFO: Writing output to: all_subreddits_2024-07
+2024-08-17 16:48:03,470 - INFO: Checking if any of any of 10 values exactly match field subreddit
+2024-08-17 16:48:03,703 - INFO: Existing input file was read, if this is not correct you should delete the pushshift_working folder and run this script again
+2024-08-17 16:48:03,703 - INFO: Processed 1 of 1 files with 17.43 of 17.43 gigabytes
+2024-08-17 16:48:03,703 - INFO: 40,701,691, 0 errored : 17.43 gb, 100% : 1/1
+2024-08-17 16:48:03,703 - INFO: Processing complete, combining 1 result files
+2024-08-17 16:48:03,703 - INFO: From 0/1 files to 0 output handles : 0/256,930 lines
+2024-08-17 16:48:16,614 - INFO: From 1/1 files to 0 output handles : 256,930/256,930 lines
+2024-08-17 16:48:16,757 - INFO: Loading files from: reddit\submissions
+2024-08-17 16:48:16,757 - INFO: Writing output to: all_subreddits_2024-05
+2024-08-17 16:48:16,757 - INFO: Checking if any of any of 10 values exactly match field subreddit
+2024-08-17 16:48:16,907 - WARNING: Args don't match args from json file. Delete working folder
+2024-08-17 16:48:17,056 - INFO: Loading files from: reddit\submissions
+2024-08-17 16:48:17,056 - INFO: Writing output to: all_subreddits_2024-04
+2024-08-17 16:48:17,056 - INFO: Checking if any of any of 10 values exactly match field subreddit
+2024-08-17 16:48:17,203 - WARNING: Args don't match args from json file. Delete working folder
+2024-08-17 16:48:17,339 - INFO: Loading files from: reddit\submissions
+2024-08-17 16:48:17,339 - INFO: Writing output to: all_subreddits_2024-03
+2024-08-17 16:48:17,339 - INFO: Checking if any of any of 10 values exactly match field subreddit
+2024-08-17 16:48:17,487 - WARNING: Args don't match args from json file. Delete working folder
+2024-08-17 16:48:17,621 - INFO: Loading files from: reddit\submissions
+2024-08-17 16:48:17,621 - INFO: Writing output to: all_subreddits_2024-02
+2024-08-17 16:48:17,621 - INFO: Checking if any of any of 10 values exactly match field subreddit
+2024-08-17 16:48:17,769 - WARNING: Args don't match args from json file. Delete working folder
+2024-08-17 16:48:17,907 - INFO: Loading files from: reddit\submissions
+2024-08-17 16:48:17,907 - INFO: Writing output to: all_subreddits_2024-01
+2024-08-17 16:48:17,907 - INFO: Checking if any of any of 10 values exactly match field subreddit
+2024-08-17 16:48:18,057 - WARNING: Args don't match args from json file. Delete working folder
+2024-08-17 16:49:09,595 - INFO: Loading files from: reddit\submissions
+2024-08-17 16:49:09,596 - INFO: Writing output to: all_subreddits_2024-07
+2024-08-17 16:49:09,596 - INFO: Checking if any of any of 10 values exactly match field subreddit
+2024-08-17 16:49:09,794 - INFO: Processed 0 of 0 files with 0.00 of 0.00 gigabytes
+2024-08-17 16:49:10,000 - INFO: Loading files from: reddit\submissions
+2024-08-17 16:49:10,000 - INFO: Writing output to: all_subreddits_2024-05
+2024-08-17 16:49:10,000 - INFO: Checking if any of any of 10 values exactly match field subreddit
+2024-08-17 16:49:10,202 - INFO: Processed 0 of 1 files with 0.00 of 15.32 gigabytes
+2024-08-17 16:49:10,202 - INFO: Processing file: reddit\submissions\RS_2024-05.zst
