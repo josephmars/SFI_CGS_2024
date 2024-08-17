@@ -15,23 +15,12 @@ cd /d data
 rmdir /s /q pushshift_working
 
 :: Run the Python scripts
-python combine_folder_multiprocess.py reddit\submissions --field subreddit --value anti-work,AskReddit,careerguidance,changemyview,Economics,Futurology,jobs,NoStupidQuestions,Showerthoughts,technology --output all_subreddits_2024-07 --file_filter "^RS_2024-07"
-rmdir /s /q pushshift_working
-
-python combine_folder_multiprocess.py reddit\submissions --field subreddit --value antiwork,AskReddit,careerguidance,changemyview,Economics,Futurology,jobs,NoStupidQuestions,Showerthoughts,technology --output all_subreddits_2024-05 --file_filter "^RS_2024-05"
-rmdir /s /q pushshift_working
-
-python combine_folder_multiprocess.py reddit\submissions --field subreddit --value antiwork,AskReddit,careerguidance,changemyview,Economics,Futurology,jobs,NoStupidQuestions,Showerthoughts,technology --output all_subreddits_2024-04 --file_filter "^RS_2024-04"
+python combine_folder_multiprocess.py reddit\submissions --field subreddit --value antiwork,AskReddit,careerguidance,changemyview,Economics,Futurology,jobs,NoStupidQuestions,Showerthoughts,technology --output all_subreddits_2024-07 --file_filter "^RS_2024-07"
 rmdir /s /q pushshift_working
 
 python combine_folder_multiprocess.py reddit\submissions --field subreddit --value antiwork,AskReddit,careerguidance,changemyview,Economics,Futurology,jobs,NoStupidQuestions,Showerthoughts,technology --output all_subreddits_2024-03 --file_filter "^RS_2024-03"
 rmdir /s /q pushshift_working
 
-python combine_folder_multiprocess.py reddit\submissions --field subreddit --value antiwork,AskReddit,careerguidance,changemyview,Economics,Futurology,jobs,NoStupidQuestions,Showerthoughts,technology --output all_subreddits_2024-02 --file_filter "^RS_2024-02"
-rmdir /s /q pushshift_working
-
-python combine_folder_multiprocess.py reddit\submissions --field subreddit --value antiwork,AskReddit,careerguidance,changemyview,Economics,Futurology,jobs,NoStupidQuestions,Showerthoughts,technology --output all_subreddits_2024-01 --file_filter "^RS_2024-01"
-rmdir /s /q pushshift_working
 
 :: End
 endlocal
