@@ -12,7 +12,9 @@ data/1000_per_subreddit
 data/2000_per_subreddit
 data/*.xlsx
 data/logs
+data/pushshift_working/
 *RS*
+
 
 
 #Models

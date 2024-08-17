@@ -173,3 +173,164 @@
 2024-08-15 17:46:25,936 - INFO: 23,000,000 lines at 6,188/s, 0 errored, 5,304 matched : 7.71 gb at 2 mb/s, 2% : 0(0)/25 files : 2d 23:28:18 remaining
 2024-08-15 17:46:40,295 - INFO: 24,000,000 lines at 6,432/s, 0 errored, 5,594 matched : 8.14 gb at 2 mb/s, 2% : 0(0)/25 files : 2d 21:18:41 remaining
 2024-08-15 17:46:45,893 - INFO: 25,000,000 lines at 6,690/s, 0 errored, 5,882 matched : 8.54 gb at 2 mb/s, 3% : 0(0)/25 files : 2d 19:13:43 remaining
+2024-08-17 11:47:03,537 - INFO: Loading files from: reddit/submissions
+2024-08-17 11:47:03,537 - INFO: Writing output to: careerguidance_2024-05
+2024-08-17 11:47:03,537 - INFO: Checking if any of the value careerguidance exactly match field subreddit
+2024-08-17 11:47:03,749 - INFO: Processed 0 of 1 files with 0.00 of 15.32 gigabytes
+2024-08-17 11:47:03,749 - INFO: Processing file: reddit/submissions\RS_2024-05.zst
+2024-08-17 11:48:03,104 - INFO: 1,000,000 lines at 16,848/s, 0 errored, 316 matched : 0.39 gb at 7 mb/s, 3% : 0(0)/1 files : 0:38:09 remaining
+2024-08-17 11:48:57,391 - INFO: 2,000,000 lines at 17,599/s, 0 errored, 642 matched : 0.77 gb at 7 mb/s, 5% : 0(0)/1 files : 0:36:30 remaining
+2024-08-17 11:49:52,411 - INFO: 3,000,000 lines at 17,787/s, 0 errored, 999 matched : 1.16 gb at 7 mb/s, 8% : 0(0)/1 files : 0:35:10 remaining
+2024-08-17 11:50:51,312 - INFO: 4,000,000 lines at 17,578/s, 0 errored, 1,305 matched : 1.54 gb at 7 mb/s, 10% : 0(0)/1 files : 0:34:07 remaining
+2024-08-17 11:51:44,530 - INFO: 5,000,000 lines at 17,807/s, 0 errored, 1,556 matched : 1.93 gb at 7 mb/s, 13% : 0(0)/1 files : 0:33:02 remaining
+2024-08-17 11:52:42,465 - INFO: 6,000,000 lines at 17,714/s, 0 errored, 1,783 matched : 2.30 gb at 7 mb/s, 15% : 0(0)/1 files : 0:32:05 remaining
+2024-08-17 11:53:34,883 - INFO: 7,000,000 lines at 17,897/s, 0 errored, 2,069 matched : 2.69 gb at 7 mb/s, 18% : 0(0)/1 files : 0:31:03 remaining
+2024-08-17 11:54:31,046 - INFO: 8,000,000 lines at 17,885/s, 0 errored, 2,440 matched : 3.08 gb at 7 mb/s, 20% : 0(0)/1 files : 0:30:02 remaining
+2024-08-17 11:55:41,683 - INFO: 9,000,000 lines at 17,377/s, 0 errored, 2,825 matched : 3.46 gb at 7 mb/s, 23% : 0(0)/1 files : 0:29:09 remaining
+2024-08-17 11:56:38,716 - INFO: 10,000,000 lines at 17,392/s, 0 errored, 3,208 matched : 3.85 gb at 7 mb/s, 25% : 0(0)/1 files : 0:28:14 remaining
+2024-08-17 11:57:32,791 - INFO: 11,000,000 lines at 17,487/s, 0 errored, 3,573 matched : 4.23 gb at 7 mb/s, 28% : 0(0)/1 files : 0:27:19 remaining
+2024-08-17 11:58:26,056 - INFO: 12,000,000 lines at 17,587/s, 0 errored, 3,942 matched : 4.62 gb at 7 mb/s, 30% : 0(0)/1 files : 0:26:22 remaining
+2024-08-17 11:59:18,985 - INFO: 13,000,000 lines at 17,681/s, 0 errored, 4,256 matched : 4.99 gb at 7 mb/s, 33% : 0(0)/1 files : 0:25:26 remaining
+2024-08-17 12:00:11,786 - INFO: 14,000,000 lines at 17,766/s, 0 errored, 4,527 matched : 5.37 gb at 7 mb/s, 35% : 0(0)/1 files : 0:24:29 remaining
+2024-08-17 12:01:04,952 - INFO: 15,000,000 lines at 17,832/s, 0 errored, 4,767 matched : 5.75 gb at 7 mb/s, 38% : 0(0)/1 files : 0:23:32 remaining
+2024-08-17 12:01:59,951 - INFO: 16,000,000 lines at 17,853/s, 0 errored, 5,098 matched : 6.13 gb at 7 mb/s, 40% : 0(0)/1 files : 0:22:36 remaining
+2024-08-17 12:02:55,547 - INFO: 17,000,000 lines at 17,861/s, 0 errored, 5,493 matched : 6.52 gb at 7 mb/s, 43% : 0(0)/1 files : 0:21:37 remaining
+2024-08-17 12:03:48,199 - INFO: 18,000,000 lines at 17,920/s, 0 errored, 5,858 matched : 6.91 gb at 7 mb/s, 45% : 0(0)/1 files : 0:20:39 remaining
+2024-08-17 12:04:41,825 - INFO: 19,000,000 lines at 17,957/s, 0 errored, 6,234 matched : 7.29 gb at 7 mb/s, 48% : 0(0)/1 files : 0:19:42 remaining
+2024-08-17 12:05:38,304 - INFO: 20,000,000 lines at 17,944/s, 0 errored, 6,668 matched : 7.67 gb at 7 mb/s, 50% : 0(0)/1 files : 0:18:44 remaining
+2024-08-17 12:06:30,593 - INFO: 21,000,000 lines at 17,997/s, 0 errored, 7,075 matched : 8.04 gb at 7 mb/s, 52% : 0(0)/1 files : 0:17:49 remaining
+2024-08-17 12:07:24,326 - INFO: 22,000,000 lines at 18,024/s, 0 errored, 7,401 matched : 8.42 gb at 7 mb/s, 55% : 0(0)/1 files : 0:16:54 remaining
+2024-08-17 12:08:28,095 - INFO: 23,000,000 lines at 17,908/s, 0 errored, 7,661 matched : 8.80 gb at 7 mb/s, 57% : 0(0)/1 files : 0:15:57 remaining
+2024-08-17 12:09:23,036 - INFO: 24,000,000 lines at 17,920/s, 0 errored, 7,948 matched : 9.17 gb at 7 mb/s, 60% : 0(0)/1 files : 0:15:02 remaining
+2024-08-17 12:10:20,504 - INFO: 25,000,000 lines at 17,899/s, 0 errored, 8,307 matched : 9.56 gb at 7 mb/s, 62% : 0(0)/1 files : 0:14:05 remaining
+2024-08-17 12:11:18,957 - INFO: 26,000,000 lines at 17,867/s, 0 errored, 8,682 matched : 9.96 gb at 7 mb/s, 65% : 0(0)/1 files : 0:13:07 remaining
+2024-08-17 12:12:13,865 - INFO: 27,000,000 lines at 17,879/s, 0 errored, 9,059 matched : 10.34 gb at 7 mb/s, 68% : 0(0)/1 files : 0:12:10 remaining
+2024-08-17 12:13:07,099 - INFO: 28,000,000 lines at 17,910/s, 0 errored, 9,480 matched : 10.73 gb at 7 mb/s, 70% : 0(0)/1 files : 0:11:13 remaining
+2024-08-17 12:14:02,778 - INFO: 29,000,000 lines at 17,912/s, 0 errored, 9,812 matched : 11.11 gb at 7 mb/s, 72% : 0(0)/1 files : 0:10:18 remaining
+2024-08-17 12:14:58,355 - INFO: 30,000,000 lines at 17,915/s, 0 errored, 10,211 matched : 11.50 gb at 7 mb/s, 75% : 0(0)/1 files : 0:09:20 remaining
+2024-08-17 12:15:52,958 - INFO: 31,000,000 lines at 17,927/s, 0 errored, 10,513 matched : 11.89 gb at 7 mb/s, 78% : 0(0)/1 files : 0:08:22 remaining
+2024-08-17 12:16:48,448 - INFO: 32,000,000 lines at 17,930/s, 0 errored, 10,784 matched : 12.28 gb at 7 mb/s, 80% : 0(0)/1 files : 0:07:25 remaining
+2024-08-17 12:17:45,333 - INFO: 33,000,000 lines at 17,919/s, 0 errored, 11,033 matched : 12.66 gb at 7 mb/s, 83% : 0(0)/1 files : 0:06:29 remaining
+2024-08-17 12:18:38,283 - INFO: 34,000,000 lines at 17,946/s, 0 errored, 11,286 matched : 13.05 gb at 7 mb/s, 85% : 0(0)/1 files : 0:05:32 remaining
+2024-08-17 12:19:31,138 - INFO: 35,000,000 lines at 17,973/s, 0 errored, 11,623 matched : 13.44 gb at 7 mb/s, 88% : 0(0)/1 files : 0:04:35 remaining
+2024-08-17 12:20:26,378 - INFO: 36,000,000 lines at 17,976/s, 0 errored, 11,972 matched : 13.82 gb at 7 mb/s, 90% : 0(0)/1 files : 0:03:39 remaining
+2024-08-17 12:21:22,257 - INFO: 37,000,000 lines at 17,974/s, 0 errored, 12,342 matched : 14.21 gb at 7 mb/s, 93% : 0(0)/1 files : 0:02:42 remaining
+2024-08-17 12:22:17,795 - INFO: 38,000,000 lines at 17,975/s, 0 errored, 12,730 matched : 14.60 gb at 7 mb/s, 95% : 0(0)/1 files : 0:01:45 remaining
+2024-08-17 12:23:28,879 - INFO: 39,000,000 lines at 17,848/s, 0 errored, 13,152 matched : 14.98 gb at 7 mb/s, 98% : 0(0)/1 files : 0:00:49 remaining
+2024-08-17 12:24:19,044 - INFO: 39,877,544 lines at 17,867/s, 0 errored, 13,417 matched : 15.32 gb at 7 mb/s, 100% : 1(0)/1 files : 0:00:00 remaining
+2024-08-17 12:24:19,051 - INFO: 39,877,544, 0 errored : 15.32 gb, 100% : 1/1
+2024-08-17 12:24:19,051 - INFO: Processing complete, combining 1 result files
+2024-08-17 12:24:19,052 - INFO: From 0/1 files to 0 output handles : 0/13,417 lines
+2024-08-17 12:24:19,872 - INFO: From 1/1 files to 0 output handles : 13,417/13,417 lines
+2024-08-17 12:28:03,930 - INFO: Loading files from: reddit/submissions
+2024-08-17 12:28:03,967 - INFO: Writing output to: all_subreddits_2024-04
+2024-08-17 12:28:03,969 - INFO: Reading anti-work,AskReddit,careerguidance,changemyview,Economics,Futurology,jobs,NoStupidQuestions,Showerthoughts,technology, for values to compare
+2024-08-17 12:34:27,499 - INFO: Loading files from: reddit/submissions
+2024-08-17 12:34:27,499 - INFO: Writing output to: all_subreddits_2024-04
+2024-08-17 12:34:27,499 - INFO: Reading anti-work,AskReddit,careerguidance,changemyview,Economics,Futurology,jobs,NoStupidQuestions,Showerthoughts,technology for values to compare
+2024-08-17 12:34:59,645 - INFO: Loading files from: reddit/submissions
+2024-08-17 12:34:59,645 - INFO: Writing output to: all_subreddits_2024-04
+2024-08-17 12:34:59,645 - INFO: Reading anti-work,AskReddit,careerguidance,changemyview,Economics,Futurology,jobs,NoStupidQuestions,Showerthoughts,technology for values to compare
+2024-08-17 12:35:43,961 - INFO: Loading files from: reddit/submissions
+2024-08-17 12:35:43,961 - INFO: Writing output to: all_subreddits_2024-04
+2024-08-17 12:35:43,961 - INFO: Checking if any of any of 10 values exactly match field subreddit
+2024-08-17 12:35:44,146 - INFO: Processed 0 of 1 files with 0.00 of 17.43 gigabytes
+2024-08-17 12:35:44,146 - INFO: Processing file: reddit/submissions\RS_2024-04.zst
+2024-08-17 12:36:50,442 - INFO: 1,000,000 lines at 15,084/s, 0 errored, 6,073 matched : 0.43 gb at 7 mb/s, 2% : 0(0)/1 files : 0:43:34 remaining
+2024-08-17 12:37:56,668 - INFO: 2,000,000 lines at 15,092/s, 0 errored, 12,464 matched : 0.86 gb at 7 mb/s, 5% : 0(0)/1 files : 0:42:29 remaining
+2024-08-17 12:39:02,751 - INFO: 3,000,000 lines at 15,105/s, 0 errored, 19,060 matched : 1.30 gb at 7 mb/s, 7% : 0(0)/1 files : 0:41:18 remaining
+2024-08-17 12:40:10,776 - INFO: 4,000,000 lines at 15,002/s, 0 errored, 25,571 matched : 1.73 gb at 7 mb/s, 10% : 0(0)/1 files : 0:40:13 remaining
+2024-08-17 12:41:16,509 - INFO: 5,000,000 lines at 15,044/s, 0 errored, 32,191 matched : 2.17 gb at 7 mb/s, 12% : 0(0)/1 files : 0:39:04 remaining
+2024-08-17 12:42:17,246 - INFO: 6,000,000 lines at 15,263/s, 0 errored, 38,399 matched : 2.59 gb at 7 mb/s, 15% : 0(0)/1 files : 0:37:56 remaining
+2024-08-17 12:43:21,414 - INFO: 7,000,000 lines at 15,308/s, 0 errored, 44,844 matched : 3.02 gb at 7 mb/s, 17% : 0(0)/1 files : 0:36:45 remaining
+2024-08-17 12:44:24,859 - INFO: 8,000,000 lines at 15,364/s, 0 errored, 51,396 matched : 3.44 gb at 7 mb/s, 20% : 0(0)/1 files : 0:35:38 remaining
+2024-08-17 12:45:24,016 - INFO: 9,000,000 lines at 15,521/s, 0 errored, 57,756 matched : 3.86 gb at 7 mb/s, 22% : 0(0)/1 files : 0:34:29 remaining
+2024-08-17 12:46:24,387 - INFO: 10,000,000 lines at 15,619/s, 0 errored, 64,333 matched : 4.30 gb at 7 mb/s, 25% : 0(0)/1 files : 0:33:18 remaining
+2024-08-17 12:47:27,869 - INFO: Loading files from: reddit/submissions
+2024-08-17 12:47:27,869 - INFO: Writing output to: all_subreddits_2024-04
+2024-08-17 12:47:27,869 - INFO: Checking if any of any of 10 values exactly match field subreddit
+2024-08-17 12:47:28,028 - INFO: Processed 0 of 1 files with 0.00 of 17.43 gigabytes
+2024-08-17 12:47:28,028 - INFO: Processing file: reddit/submissions\RS_2024-04.zst
+2024-08-17 12:48:36,543 - INFO: 1,000,000 lines at 14,595/s, 0 errored, 6,073 matched : 0.43 gb at 6 mb/s, 2% : 0(0)/1 files : 0:45:02 remaining
+2024-08-17 12:49:38,175 - INFO: 2,000,000 lines at 15,367/s, 0 errored, 12,464 matched : 0.86 gb at 7 mb/s, 5% : 0(0)/1 files : 0:42:47 remaining
+2024-08-17 12:50:37,948 - INFO: 3,000,000 lines at 15,796/s, 0 errored, 19,060 matched : 1.30 gb at 7 mb/s, 7% : 0(0)/1 files : 0:40:52 remaining
+2024-08-17 12:51:34,752 - INFO: 4,000,000 lines at 16,212/s, 0 errored, 25,571 matched : 1.73 gb at 7 mb/s, 10% : 0(0)/1 files : 0:39:07 remaining
+2024-08-17 12:52:30,450 - INFO: 5,000,000 lines at 16,533/s, 0 errored, 32,191 matched : 2.17 gb at 7 mb/s, 12% : 0(0)/1 files : 0:37:29 remaining
+2024-08-17 12:53:29,198 - INFO: 6,000,000 lines at 16,613/s, 0 errored, 38,399 matched : 2.59 gb at 7 mb/s, 15% : 0(0)/1 files : 0:36:08 remaining
+2024-08-17 12:54:35,008 - INFO: 7,000,000 lines at 16,394/s, 0 errored, 44,844 matched : 3.02 gb at 7 mb/s, 17% : 0(0)/1 files : 0:34:54 remaining
+2024-08-17 12:55:27,183 - INFO: 8,000,000 lines at 16,696/s, 0 errored, 51,396 matched : 3.44 gb at 7 mb/s, 20% : 0(0)/1 files : 0:33:42 remaining
+2024-08-17 12:56:23,030 - INFO: 9,000,000 lines at 16,822/s, 0 errored, 57,756 matched : 3.86 gb at 7 mb/s, 22% : 0(0)/1 files : 0:32:31 remaining
+2024-08-17 12:57:20,962 - INFO: 10,000,000 lines at 16,865/s, 0 errored, 64,333 matched : 4.30 gb at 7 mb/s, 25% : 0(0)/1 files : 0:31:21 remaining
+2024-08-17 12:58:20,754 - INFO: 11,000,000 lines at 16,852/s, 0 errored, 70,877 matched : 4.73 gb at 7 mb/s, 27% : 0(0)/1 files : 0:30:13 remaining
+2024-08-17 12:59:14,246 - INFO: 12,000,000 lines at 16,992/s, 0 errored, 77,482 matched : 5.16 gb at 7 mb/s, 30% : 0(0)/1 files : 0:29:05 remaining
+2024-08-17 13:00:13,150 - INFO: 13,000,000 lines at 16,991/s, 0 errored, 84,110 matched : 5.59 gb at 7 mb/s, 32% : 0(0)/1 files : 0:27:59 remaining
+2024-08-17 13:01:05,829 - INFO: 14,000,000 lines at 17,119/s, 0 errored, 90,694 matched : 6.04 gb at 8 mb/s, 35% : 0(0)/1 files : 0:26:50 remaining
+2024-08-17 13:01:57,716 - INFO: 15,000,000 lines at 17,248/s, 0 errored, 97,126 matched : 6.47 gb at 8 mb/s, 37% : 0(0)/1 files : 0:25:43 remaining
+2024-08-17 13:02:54,020 - INFO: 16,000,000 lines at 17,279/s, 0 errored, 103,372 matched : 6.90 gb at 8 mb/s, 40% : 0(0)/1 files : 0:24:39 remaining
+2024-08-17 13:03:46,351 - INFO: 17,000,000 lines at 17,377/s, 0 errored, 109,900 matched : 7.31 gb at 8 mb/s, 42% : 0(0)/1 files : 0:23:36 remaining
+2024-08-17 13:04:37,907 - INFO: 18,000,000 lines at 17,478/s, 0 errored, 115,914 matched : 7.74 gb at 8 mb/s, 44% : 0(0)/1 files : 0:22:32 remaining
+2024-08-17 13:05:31,875 - INFO: 19,000,000 lines at 17,530/s, 0 errored, 121,781 matched : 8.17 gb at 8 mb/s, 47% : 0(0)/1 files : 0:21:28 remaining
+2024-08-17 13:06:26,619 - INFO: 20,000,000 lines at 17,566/s, 0 errored, 127,887 matched : 8.60 gb at 8 mb/s, 49% : 0(0)/1 files : 0:20:25 remaining
+2024-08-17 13:07:18,495 - INFO: 21,000,000 lines at 17,640/s, 0 errored, 134,373 matched : 9.03 gb at 8 mb/s, 52% : 0(0)/1 files : 0:19:22 remaining
+2024-08-17 13:08:10,361 - INFO: 22,000,000 lines at 17,709/s, 0 errored, 140,655 matched : 9.47 gb at 8 mb/s, 54% : 0(0)/1 files : 0:18:20 remaining
+2024-08-17 13:09:11,146 - INFO: 23,000,000 lines at 17,650/s, 0 errored, 146,962 matched : 9.88 gb at 8 mb/s, 57% : 0(0)/1 files : 0:17:20 remaining
+2024-08-17 13:10:08,166 - INFO: 24,000,000 lines at 17,645/s, 0 errored, 153,544 matched : 10.32 gb at 8 mb/s, 59% : 0(0)/1 files : 0:16:17 remaining
+2024-08-17 13:11:10,958 - INFO: 25,000,000 lines at 17,569/s, 0 errored, 160,397 matched : 10.74 gb at 8 mb/s, 62% : 0(0)/1 files : 0:15:19 remaining
+2024-08-17 13:12:15,200 - INFO: 26,000,000 lines at 17,483/s, 0 errored, 166,508 matched : 11.18 gb at 8 mb/s, 64% : 0(0)/1 files : 0:14:17 remaining
+2024-08-17 13:13:13,035 - INFO: 27,000,000 lines at 17,476/s, 0 errored, 172,564 matched : 11.61 gb at 8 mb/s, 67% : 0(0)/1 files : 0:13:18 remaining
+2024-08-17 13:14:16,661 - INFO: 28,000,000 lines at 17,406/s, 0 errored, 178,827 matched : 12.03 gb at 8 mb/s, 69% : 0(0)/1 files : 0:12:19 remaining
+2024-08-17 13:15:10,723 - INFO: 29,000,000 lines at 17,442/s, 0 errored, 185,069 matched : 12.45 gb at 8 mb/s, 71% : 0(0)/1 files : 0:11:21 remaining
+2024-08-17 13:16:04,230 - INFO: 30,000,000 lines at 17,480/s, 0 errored, 191,204 matched : 12.87 gb at 8 mb/s, 74% : 0(0)/1 files : 0:10:22 remaining
+2024-08-17 13:17:02,168 - INFO: 31,000,000 lines at 17,473/s, 0 errored, 197,285 matched : 13.30 gb at 8 mb/s, 76% : 0(0)/1 files : 0:09:23 remaining
+2024-08-17 13:17:55,807 - INFO: 32,000,000 lines at 17,508/s, 0 errored, 203,479 matched : 13.73 gb at 8 mb/s, 79% : 0(0)/1 files : 0:08:24 remaining
+2024-08-17 13:18:48,808 - INFO: 33,000,000 lines at 17,546/s, 0 errored, 209,787 matched : 14.16 gb at 8 mb/s, 81% : 0(0)/1 files : 0:07:26 remaining
+2024-08-17 13:19:46,506 - INFO: 34,000,000 lines at 17,540/s, 0 errored, 215,825 matched : 14.58 gb at 8 mb/s, 84% : 0(0)/1 files : 0:06:27 remaining
+2024-08-17 13:20:40,187 - INFO: 35,000,000 lines at 17,569/s, 0 errored, 221,938 matched : 15.01 gb at 8 mb/s, 86% : 0(0)/1 files : 0:05:29 remaining
+2024-08-17 13:21:31,563 - INFO: 36,000,000 lines at 17,617/s, 0 errored, 227,802 matched : 15.42 gb at 8 mb/s, 88% : 0(0)/1 files : 0:04:32 remaining
+2024-08-17 13:22:24,890 - INFO: 37,000,000 lines at 17,645/s, 0 errored, 234,087 matched : 15.85 gb at 8 mb/s, 91% : 0(0)/1 files : 0:03:34 remaining
+2024-08-17 13:23:18,966 - INFO: 38,000,000 lines at 17,667/s, 0 errored, 239,940 matched : 16.27 gb at 8 mb/s, 93% : 0(0)/1 files : 0:02:37 remaining
+2024-08-17 13:24:13,069 - INFO: 39,000,000 lines at 17,687/s, 0 errored, 246,273 matched : 16.70 gb at 8 mb/s, 96% : 0(0)/1 files : 0:01:38 remaining
+2024-08-17 13:25:05,950 - INFO: 40,000,000 lines at 17,813/s, 0 errored, 252,460 matched : 17.13 gb at 8 mb/s, 98% : 0(0)/1 files : 0:00:40 remaining
+2024-08-17 13:25:47,589 - INFO: 40,701,691 lines at 17,840/s, 0 errored, 256,930 matched : 17.43 gb at 8 mb/s, 100% : 1(0)/1 files : 0:00:00 remaining
+2024-08-17 13:25:47,608 - INFO: 40,701,691, 0 errored : 17.43 gb, 100% : 1/1
+2024-08-17 13:25:47,609 - INFO: Processing complete, combining 1 result files
+2024-08-17 13:25:47,609 - INFO: From 0/1 files to 0 output handles : 0/256,930 lines
+2024-08-17 13:25:59,518 - INFO: From 1/1 files to 0 output handles : 256,930/256,930 lines
+2024-08-17 16:48:03,470 - INFO: Loading files from: reddit\submissions
+2024-08-17 16:48:03,470 - INFO: Writing output to: all_subreddits_2024-07
+2024-08-17 16:48:03,470 - INFO: Checking if any of any of 10 values exactly match field subreddit
+2024-08-17 16:48:03,703 - INFO: Existing input file was read, if this is not correct you should delete the pushshift_working folder and run this script again
+2024-08-17 16:48:03,703 - INFO: Processed 1 of 1 files with 17.43 of 17.43 gigabytes
+2024-08-17 16:48:03,703 - INFO: 40,701,691, 0 errored : 17.43 gb, 100% : 1/1
+2024-08-17 16:48:03,703 - INFO: Processing complete, combining 1 result files
+2024-08-17 16:48:03,703 - INFO: From 0/1 files to 0 output handles : 0/256,930 lines
+2024-08-17 16:48:16,614 - INFO: From 1/1 files to 0 output handles : 256,930/256,930 lines
+2024-08-17 16:48:16,757 - INFO: Loading files from: reddit\submissions
+2024-08-17 16:48:16,757 - INFO: Writing output to: all_subreddits_2024-05
+2024-08-17 16:48:16,757 - INFO: Checking if any of any of 10 values exactly match field subreddit
+2024-08-17 16:48:16,907 - WARNING: Args don't match args from json file. Delete working folder
+2024-08-17 16:48:17,056 - INFO: Loading files from: reddit\submissions
+2024-08-17 16:48:17,056 - INFO: Writing output to: all_subreddits_2024-04
+2024-08-17 16:48:17,056 - INFO: Checking if any of any of 10 values exactly match field subreddit
+2024-08-17 16:48:17,203 - WARNING: Args don't match args from json file. Delete working folder
+2024-08-17 16:48:17,339 - INFO: Loading files from: reddit\submissions
+2024-08-17 16:48:17,339 - INFO: Writing output to: all_subreddits_2024-03
+2024-08-17 16:48:17,339 - INFO: Checking if any of any of 10 values exactly match field subreddit
+2024-08-17 16:48:17,487 - WARNING: Args don't match args from json file. Delete working folder
+2024-08-17 16:48:17,621 - INFO: Loading files from: reddit\submissions
+2024-08-17 16:48:17,621 - INFO: Writing output to: all_subreddits_2024-02
+2024-08-17 16:48:17,621 - INFO: Checking if any of any of 10 values exactly match field subreddit
+2024-08-17 16:48:17,769 - WARNING: Args don't match args from json file. Delete working folder
+2024-08-17 16:48:17,907 - INFO: Loading files from: reddit\submissions
+2024-08-17 16:48:17,907 - INFO: Writing output to: all_subreddits_2024-01
+2024-08-17 16:48:17,907 - INFO: Checking if any of any of 10 values exactly match field subreddit
+2024-08-17 16:48:18,057 - WARNING: Args don't match args from json file. Delete working folder
+2024-08-17 16:49:09,595 - INFO: Loading files from: reddit\submissions
+2024-08-17 16:49:09,596 - INFO: Writing output to: all_subreddits_2024-07
+2024-08-17 16:49:09,596 - INFO: Checking if any of any of 10 values exactly match field subreddit
+2024-08-17 16:49:09,794 - INFO: Processed 0 of 0 files with 0.00 of 0.00 gigabytes
+2024-08-17 16:49:10,000 - INFO: Loading files from: reddit\submissions
+2024-08-17 16:49:10,000 - INFO: Writing output to: all_subreddits_2024-05
+2024-08-17 16:49:10,000 - INFO: Checking if any of any of 10 values exactly match field subreddit
+2024-08-17 16:49:10,202 - INFO: Processed 0 of 1 files with 0.00 of 15.32 gigabytes
+2024-08-17 16:49:10,202 - INFO: Processing file: reddit\submissions\RS_2024-05.zst
