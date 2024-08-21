@@ -22,12 +22,17 @@ To extract the data from Reddit using _academictorrents_ in the Wahab cluster: h
 
 ### Data preprocessing
 Use the files from this [repository](https://github.com/Watchful1/PushshiftDumps) to preprocess the data.
-     1. `single_file.py` decompresses and iterates over a single zst compressed file
-     2. `iterate_folder.py` does the same, but for all files in a folder
-     3. 
-     Queries:
+     1. `single_file.py` decompresses and iterates over a single zst compressed file.
+     2. `iterate_folder.py` does the same, but for all files in a folder.
+     3. Queries:
       - Getting 1 subreddit: `python combine_folder_multiprocess.py reddit/submissions --field subreddit --value careerguidance --output pushshift2 --processes 20 --file_filter "^RS_2024-07"`
       - Getting all subreddits: `python combine_folder_multiprocess.py reddit/submissions --field subreddit --value anti-work,AskReddit,careerguidance,changemyview,Economics,Futurology,jobs,NoStupidQuestions,Showerthoughts,technology --output all_subreddits_2024-04 --file_filter "^RS_2024-04"`
+      4. Use `filter_file.py` to convert the compressed .zst files into csv.
+      5. Use `query_csv.py` to query the csv files for each month and subreddit into only one.
+      6. Use `get_sample.py` to get a sample of the data either by month or by subreddit (proportionally).
+
+## Results
+  1. Number of reddits that matches the query on the 10 subreddits from 2022-07 to 2024-07: `7,616,585`
 
 
 ## Day 4 - Thu
