@@ -8,9 +8,7 @@ client_secrets.json
 # Large data files
 data/reddit/comments
 data/reddit/submissions
-data/1000_per_subreddit
-data/2000_per_subreddit
-data/*.xlsx
+data/from_API
 data/logs/
 data/pushshift_working/
 data/10subreddits_csv/filtered.csv
