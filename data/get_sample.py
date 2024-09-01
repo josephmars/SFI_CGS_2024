@@ -6,9 +6,9 @@ import pandas as pd
 PATH = "/home/jmart130/GitHub/SFI_CGS_2024/data/10subreddits_csv/filtered.csv"
 # PATH = "/home/jmart130/GitHub/SFI_CGS_2024/data/10subreddits_csv/2022-07/careerguidance_submissions.csv"
 # Path to the folder where the sample csv file will be saved
-OUTPUT_PATH = "/home/jmart130/GitHub/SFI_CGS_2024/data/10subreddits_csv/sample_1000_monthly.csv"
+OUTPUT_PATH = "/home/jmart130/GitHub/SFI_CGS_2024/data/10subreddits_csv/sample_2000_monthly.xlsx"
 # Number of rows to get
-n = 1000
+n = 2000
 # Stratify the sample by subreddit or by month, use None to not stratify
 stratification_column = 'month'
 # If true, the sample will have the same proportion of each subreddit or month as the original data, otherwise the sample will have the same number of rows for each subreddit or month
@@ -41,7 +41,7 @@ def get_sample(df, n=1000, stratification_column = 'month'):
 # Save the sample to a csv file
 def save_sample(sample, output_path):
     print(f"Saving sample to {output_path} ...")
-    sample.to_csv(output_path, index=False)
+    sample.to_excel(output_path, index=False)
     
 if __name__ == "__main__":
     print(f"Getting sample from {PATH} ...")

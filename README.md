@@ -1,17 +1,10 @@
-**to do**
-- [x] Download all the posts
-- [x] Split all the posts
-- [x] Upload all the posts
-- [ ] Process all the posts
-
-
+# Project
 ## Get data form Reddit API
 https://www.jcchouinard.com/reddit-api/
 Since the API limits in the number of posts and comments we can get, we decided to use the Archive of Reddit. We need to use Torrent to download the data (predicted to be ~2TB).
-To extract the data from Reddit using _academictorrents_ in the Wahab cluster: https://academictorrents.com/docs/downloading.html. Use the command `at-get 9c263fc85366c1ef8f5bb9da0203f4c8c8db75f4`
-
-[2005-2023](https://academictorrents.com/details/9c263fc85366c1ef8f5bb9da0203f4c8c8db75f4)
-[All](https://github.com/ArthurHeitmann/arctic_shift/blob/master/download_links.md)
+To extract the data from Reddit using _academictorrents_ in the Wahab cluster: https://academictorrents.com/docs/downloading.html. Use the command `at-get 9c263fc85366c1ef8f5bb9da0203f4c8c8db75f4`.
+- [2005-2023](https://academictorrents.com/details/9c263fc85366c1ef8f5bb9da0203f4c8c8db75f4)
+- [All (until 2024-07)](https://github.com/ArthurHeitmann/arctic_shift/blob/master/download_links.md)
 
 
 ### Download data and upload to HPC 
@@ -32,8 +25,17 @@ Use the files from this [repository](https://github.com/Watchful1/PushshiftDumps
       6. Use `get_sample.py` to get a sample of the data either by month or by subreddit (proportionally).
 
 ## Results
-  1. Number of reddits that matches the query on the 10 subreddits from 2022-07 to 2024-07: `7,616,585`
+  1. Number of reddits that matches the query on the 10 subreddits from 2022-07 to 2024-07: `7,616,585` !!! WRONG!!!
 
+
+## Meetings
+### Alejandro
+1. Do a sentiment analysis to check the change in emotion/fear on the workers
+2. Jobs with risk could be a boundary to the perception. Validation OR pushback OR alternative. Is this related to the risk of automation? Variables:
+  1.  Profession
+  2.  Strategy
+  3.  Response (validation/pushback)
+3. Word embeddigs if LLMs for labeling does not work. 
 
 ## Day 4 - Thu
 Scaling theory is a new field (~10 years), and right now it accounts for a lot of noise, but it is evolving on how to flatten up the curves.
@@ -46,6 +48,7 @@ Probably just patience is the best option, and time helps in "smooth things up".
 Rajiv: 
 
 
+# CGS in Uniandes (in person)
 
 ## Day 3 - Wed
 15 minutes talk about the project

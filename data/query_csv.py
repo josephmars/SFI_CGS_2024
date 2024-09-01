@@ -10,8 +10,8 @@ PATH = "/home/jmart130/GitHub/SFI_CGS_2024/data/10subreddits_csv/"
 OUTPUT_PATH = "/home/jmart130/GitHub/SFI_CGS_2024/data/10subreddits_csv/filtered.csv"
 
 # Query to filter the text
-query = '(ai OR "artificial intelligence" OR chatgpt) AND (job OR jobs OR work OR career OR employment OR profession) AND (replace OR replaced OR replaces OR replacement OR affected OR affect OR affecting OR disappear OR disappearing OR disappeared OR fired OR hiring OR hire OR lose OR lost OR losing OR eliminate OR eliminates OR eliminating OR redundant OR safe OR obsolete OR threaten)'
-
+# query = '(ai OR "artificial intelligence" OR chatgpt) AND (job OR jobs OR work OR career OR employment OR profession) AND (replace OR replaced OR replaces OR replacement OR affected OR affect OR affecting OR disappear OR disappearing OR disappeared OR fired OR hiring OR hire OR lose OR lost OR losing OR eliminate OR eliminates OR eliminating OR redundant OR safe OR obsolete OR threaten)'
+query = '("ai " OR " ai" OR "artificial intelligence" OR chatgpt) AND (job OR jobs OR work OR career OR employment OR profession OR worker OR workers OR employee OR replace OR replaced OR replaces OR replacement OR affected OR affect OR affecting OR disappear OR disappearing OR disappeared OR fired OR hiring OR hire OR lose OR lost OR losing OR eliminate OR eliminates OR eliminating OR redundant OR safe OR obsolete)'
 
 # Get folder names in PATH
 def get_folders():
@@ -45,11 +45,15 @@ def concat_files(folder):
     print(f"Processing folder {folder} ...")
     files = get_files(folder)
     dfs = [pd.read_csv(os.path.join(PATH, folder, f)) for f in files]
+    filtered_dfs = []
     for df in dfs:
         df['match'] = df['text'].apply(lambda x: match_query(query, str(x)))
-        df = df[df['match']]
-         
-    return pd.concat(dfs, ignore_index=True)
+        filtered_df = df[df['match'] == True]
+        filtered_dfs.append(filtered_df)
+    # Concatenate all filtered DataFrames into one
+    result_df = pd.concat(filtered_dfs, ignore_index=True)
+
+    return result_df
                 
                 
 # Concatenate all csv files in all folders while filtering by query (removing unmatching rows)
