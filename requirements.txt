@@ -7,3 +7,5 @@ scikit-learn
 nbformat
 zstandard
 openpyxl
+torch
+transformers
