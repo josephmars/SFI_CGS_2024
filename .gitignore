@@ -12,7 +12,7 @@ data/from_API
 data/logs/
 data/pushshift_working/
 *RS*
-
+data/all_reddit_csv/*.csv
 
 
 #Models

@@ -1,13 +1,14 @@
 """Script to query the csv files from Reddit data
 """
 import os
-import pandas as pd
+import csv
+from collections import defaultdict
 
 # Path to the folder containing the csv files under a folder for each month
-PATH = "/home/jmart130/GitHub/SFI_CGS_2024/data/10subreddits_csv/"
+PATH = "/home/jmart130/GitHub/SFI_CGS_2024/data/all_reddit_csv/"
 
 # Path to the folder where the filtered csv files will be saved
-OUTPUT_PATH = "/home/jmart130/GitHub/SFI_CGS_2024/data/10subreddits_csv/filtered.csv"
+OUTPUT_PATH = "/home/jmart130/GitHub/SFI_CGS_2024/data/all_reddit_csv/filtered.csv"
 
 # Query to filter the text
 # query = '(ai OR "artificial intelligence" OR chatgpt) AND (job OR jobs OR work OR career OR employment OR profession) AND (replace OR replaced OR replaces OR replacement OR affected OR affect OR affecting OR disappear OR disappearing OR disappeared OR fired OR hiring OR hire OR lose OR lost OR losing OR eliminate OR eliminates OR eliminating OR redundant OR safe OR obsolete OR threaten)'
@@ -44,32 +45,39 @@ def match_query(query, text, exact_match=False):
 def concat_files(folder):
     print(f"Processing folder {folder} ...")
     files = get_files(folder)
-    dfs = [pd.read_csv(os.path.join(PATH, folder, f)) for f in files]
-    filtered_dfs = []
-    for df in dfs:
-        df['match'] = df['text'].apply(lambda x: match_query(query, str(x)))
-        filtered_df = df[df['match'] == True]
-        filtered_dfs.append(filtered_df)
-    # Concatenate all filtered DataFrames into one
-    result_df = pd.concat(filtered_dfs, ignore_index=True)
+    result = []
+    for file in files:
+        with open(os.path.join(PATH, folder, file), 'r', newline='', encoding='utf-8') as csvfile:
+            reader = csv.DictReader(csvfile)
+            for row in reader:
+                if match_query(query, str(row.get('text', ''))):
+                    result.append(row)
+    return result
 
-    return result_df
-                
-                
 # Concatenate all csv files in all folders while filtering by query (removing unmatching rows)
 def concat_all_files():
     folders = get_folders()
-    dfs = [concat_files(f) for f in folders]
-    return pd.concat(dfs, ignore_index=True)
+    all_results = []
+    for folder in folders:
+        all_results.extend(concat_files(folder))
+    return all_results
 
-# Save the concatenated dataframe to a csv file
-def save_df(df, output_path):
+# Save the concatenated data to a csv file
+def save_data(data, output_path):
     print(f"Saving filtered data to {output_path} ...")
-    df.to_csv(output_path, index=False)
+    if not data:
+        print("No data to save.")
+        return
+    fieldnames = data[0].keys()
+    with open(output_path, 'w', newline='', encoding='utf-8') as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        for row in data:
+            writer.writerow(row)
 
 def main():
-    df = concat_all_files()
-    save_df(df, OUTPUT_PATH)
+    data = concat_all_files()
+    save_data(data, OUTPUT_PATH)
 
 if __name__ == "__main__":    
     main()
