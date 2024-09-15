@@ -1,6 +1,10 @@
 """Get a sample of the data in a csv file per subreddit and per month
 """
 import pandas as pd
+import openpyxl
+# Add a seed
+import random
+random.seed(42)
 #-----------------
 # INPUTS
 #-----------------
@@ -45,8 +49,20 @@ def get_sample(df, n=1000, stratification_column = 'month'):
 # Save the sample to a csv file
 def save_sample(sample, output_path):
     print(f"Saving sample to {output_path} ...")
-    sample.to_excel(output_path, index=False)
     
+    # Convert all columns to string and truncate long entries
+    for col in sample.columns:
+        sample[col] = sample[col].astype(str).apply(lambda x: x[:32767] if len(x) > 32767 else x)
+    
+    # Remove any characters that Excel doesn't like
+    sample = sample.replace(r'\x00', '', regex=True)  # Remove null characters
+    
+    # Save to Excel
+    with pd.ExcelWriter(output_path, engine='openpyxl') as writer:
+        sample.to_excel(writer, index=False, sheet_name='Sheet1')
+        
+    print(f"Sample saved successfully to {output_path}")
+
 if __name__ == "__main__":
     print(f"Getting sample from {PATH} ...")
     df = pd.read_csv(PATH)
