@@ -3,8 +3,9 @@ import subprocess
 import time 
 from numpy import nan
 reddits_path = '/Users/joseph/GitHub/SFI_CGS_2024/data/all_reddits/filtered.csv'
-filtered_path = '/Users/joseph/GitHub/SFI_CGS_2024/data/all_reddits/llm_validated_reddits.xlsx'
-checkpoint = True
+filtered_path = '/Users/joseph/GitHub/SFI_CGS_2024/data/all_reddits/llm_validated_reddits_fewshot.xlsx'
+examples_path = '/Users/joseph/GitHub/SFI_CGS_2024/code/labeling/examples.txt'
+checkpoint = False
 
 def run_llama(prompt):
     """
@@ -51,7 +52,10 @@ def export(df, path):
 
 # # Identify whether each individual reddit it talking about AI taking over jobs using ollama (llama 3.1 7b)
 def llm_labeling_validation(reddit, max_retries=1):
-    prompt = f"Is the following reddit about AI taking over jobs? (TRUE or FALSE). Do not include any other information in your response, just TRUE or FALSE.\n\n########\nReddit:{reddit}"
+    with open(examples_path, 'r') as file:
+        examples = file.readlines()
+    examples_str = "\n".join([example.strip() for example in examples])
+    prompt = f"Is the following reddit about AI taking over jobs? (TRUE or FALSE). Do not include any other information in your response, limit your response to just TRUE or FALSE. These are few examples of reddit posts that are and are not about AI taking over jobs. Use them to help you label the data.\n---------\nExamples:\n{examples_str}\n\n---------\nReddit:\n{reddit}"
     output = run_llama(prompt)
     n_retries = 0
     while output.strip().upper().replace(".", "") not in ["TRUE", "FALSE"] and n_retries < max_retries:
