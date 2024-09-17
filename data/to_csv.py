@@ -16,13 +16,15 @@ import time
 from datetime import datetime
 import logging.handlers
 
+dates = ["2023-11", "2023-12", "2024-01", "2024-02", "2024-03", "2024-04", "2024-05", "2024-06", "2024-07"]
 
-# put the path to the input file
-input_file_path = r"/home/jmart130/GitHub/SFI_CGS_2024/data/all_subreddits_2022-07_copy/NoStupidQuestions_submissions.zst"
-# put the path to the output file, with the csv extension
-output_file_path = input_file_path.replace(".zst",".csv")
-# if you want a custom set of fields, put them in the following list. If you leave it empty the script will use a default set of fields
-fields = ["author","title","score","created","link","text","url", "subreddit"]
+for date in dates:
+    # put the path to the input file
+    input_file_path = f"/home/jmart130/GitHub/SFI_CGS_2024/data/reddit/submissions/RS_{date}.zst"
+    # put the path to the output file, with the csv extension
+    output_file_path = f"/home/jmart130/GitHub/SFI_CGS_2024/data/all_reddit_csv/{date}.csv"
+    # if you want a custom set of fields, put them in the following list. If you leave it empty the script will use a default set of fields
+    fields = ["author","title","score","created","link","text","url", "subreddit"]
 
 log = logging.getLogger("bot")
 log.setLevel(logging.DEBUG)
@@ -67,66 +69,73 @@ def read_lines_zst(file_name):
 		reader.close()
 
 
+def main():
+	for date in dates:
+		input_file_path = f"/home/jmart130/GitHub/SFI_CGS_2024/data/reddit/submissions/RS_{date}.zst"
+		output_file_path = f"/home/jmart130/GitHub/SFI_CGS_2024/data/all_reddit_csv/{date}.csv"
+		fields = ["author","title","score","created","link","text","url", "subreddit"]
+		print(f"Processing {date} and writing to {output_file_path}")
+		if len(sys.argv) >= 3:
+			input_file_path = sys.argv[1]
+			output_file_path = sys.argv[2]
+			fields = sys.argv[3].split(",")
+
+		is_submission = "submission" in input_file_path
+		if not len(fields):
+			if is_submission:
+				fields = ["author","title","score","created","link","text","url"]
+			else:
+				fields = ["author","score","created","link","body"]
+
+		file_size = os.stat(input_file_path).st_size
+		file_lines, bad_lines = 0, 0
+		line, created = None, None
+		output_file = open(output_file_path, "w", encoding='utf-8', newline="")
+		writer = csv.writer(output_file)
+		writer.writerow(fields)
+		try:
+			for line, file_bytes_processed in read_lines_zst(input_file_path):
+				try:
+					obj = json.loads(line)
+					output_obj = []
+					for field in fields:
+						if field == "created":
+							value = datetime.fromtimestamp(int(obj['created_utc'])).strftime("%Y-%m-%d %H:%M")
+						elif field == "link":
+							if 'permalink' in obj:
+								value = f"https://www.reddit.com{obj['permalink']}"
+							else:
+								value = f"https://www.reddit.com/r/{obj['subreddit']}/comments/{obj['link_id'][3:]}/_/{obj['id']}/"
+						elif field == "author":
+							value = f"u/{obj['author']}"
+						elif field == "text":
+							if 'selftext' in obj:
+								value = obj['selftext']
+							else:
+								value = ""
+						else:
+							value = obj[field]
+
+						output_obj.append(str(value).encode("utf-8", errors='replace').decode())
+					writer.writerow(output_obj)
+
+					created = datetime.utcfromtimestamp(int(obj['created_utc']))
+				except json.JSONDecodeError as err:
+					bad_lines += 1
+				file_lines += 1
+				if file_lines % 100000 == 0:
+					elapsed_time_str = get_elapsed_time_str(start_time, time.time())
+
+					log.info(f"{created.strftime('%Y-%m-%d %H:%M:%S')} : {file_lines:,} : {bad_lines:,} : {(file_bytes_processed / file_size) * 100:.1f}% | {elapsed_time_str}")
+		except KeyError as err:
+			log.info(f"Object has no key: {err}")
+			log.info(line)
+		except Exception as err:
+			log.info(err)
+			log.info(line)
+
+		output_file.close()
+		log.info(f"Complete : {file_lines:,} : {bad_lines:,}")
+
 if __name__ == "__main__":
-	if len(sys.argv) >= 3:
-		input_file_path = sys.argv[1]
-		output_file_path = sys.argv[2]
-		fields = sys.argv[3].split(",")
-
-	is_submission = "submission" in input_file_path
-	if not len(fields):
-		if is_submission:
-			fields = ["author","title","score","created","link","text","url"]
-		else:
-			fields = ["author","score","created","link","body"]
-
-	file_size = os.stat(input_file_path).st_size
-	file_lines, bad_lines = 0, 0
-	line, created = None, None
-	output_file = open(output_file_path, "w", encoding='utf-8', newline="")
-	writer = csv.writer(output_file)
-	writer.writerow(fields)
-	try:
-		for line, file_bytes_processed in read_lines_zst(input_file_path):
-			try:
-				obj = json.loads(line)
-				output_obj = []
-				for field in fields:
-					if field == "created":
-						value = datetime.fromtimestamp(int(obj['created_utc'])).strftime("%Y-%m-%d %H:%M")
-					elif field == "link":
-						if 'permalink' in obj:
-							value = f"https://www.reddit.com{obj['permalink']}"
-						else:
-							value = f"https://www.reddit.com/r/{obj['subreddit']}/comments/{obj['link_id'][3:]}/_/{obj['id']}/"
-					elif field == "author":
-						value = f"u/{obj['author']}"
-					elif field == "text":
-						if 'selftext' in obj:
-							value = obj['selftext']
-						else:
-							value = ""
-					else:
-						value = obj[field]
-
-					output_obj.append(str(value).encode("utf-8", errors='replace').decode())
-				writer.writerow(output_obj)
-
-				created = datetime.utcfromtimestamp(int(obj['created_utc']))
-			except json.JSONDecodeError as err:
-				bad_lines += 1
-			file_lines += 1
-			if file_lines % 100000 == 0:
-				elapsed_time_str = get_elapsed_time_str(start_time, time.time())
-
-				log.info(f"{created.strftime('%Y-%m-%d %H:%M:%S')} : {file_lines:,} : {bad_lines:,} : {(file_bytes_processed / file_size) * 100:.1f}% | {elapsed_time_str}")
-	except KeyError as err:
-		log.info(f"Object has no key: {err}")
-		log.info(line)
-	except Exception as err:
-		log.info(err)
-		log.info(line)
-
-	output_file.close()
-	log.info(f"Complete : {file_lines:,} : {bad_lines:,}")
-
+    main()
