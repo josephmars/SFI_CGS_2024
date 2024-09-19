@@ -2,10 +2,12 @@ import pandas as pd
 import subprocess
 import time 
 from numpy import nan
-reddits_path = '/Users/joseph/GitHub/SFI_CGS_2024/data/all_reddits/filtered.csv'
-filtered_path = '/Users/joseph/GitHub/SFI_CGS_2024/data/all_reddits/llm_validated_reddits_fewshot.xlsx'
+
+
+reddits_path = '/Users/joseph/GitHub/SFI_CGS_2024/data/all_reddits/filtered.csv' # Will be ignored if checkpoint is True
+filtered_path = '/Users/joseph/GitHub/SFI_CGS_2024/data/all_reddits/llm_validated_reddits_fewshot.xlsx' # Will be used as input if checkpoint is True
 examples_path = '/Users/joseph/GitHub/SFI_CGS_2024/code/labeling/examples.txt'
-checkpoint = False
+checkpoint = True
 
 def run_llama(prompt):
     """
@@ -111,4 +113,4 @@ def run_llm_validation(logging=100, exporting=300, resting=300, rest_time=60):
         
 # Example usage
 if __name__ == "__main__":
-    run_llm_validation(logging=10, exporting=300, resting=300, rest_time=10)
+    run_llm_validation(logging=25, exporting=100, resting=200, rest_time=20)
