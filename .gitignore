@@ -21,3 +21,6 @@ code/bertopic_model
 # SQL Server files
 *.mdf
 *.ldf
+
+# MacOS files
+.DS_Store
