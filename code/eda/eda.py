@@ -12,6 +12,8 @@ df = pd.read_excel('/Users/joseph/GitHub/SFI_CGS_2024/data/all_reddits/llm_valid
 
 df_valid = df[df['valid'] == True]
 
+df_valid.to_excel('/Users/joseph/GitHub/SFI_CGS_2024/data/all_reddits/llm_validated_reddits_fewshot_valid.xlsx', index=False)
+
 print("Number of valid reddits: ", len(df_valid))
 
 # 1) Create a line plot of the number of valid reddits over time (per month)
@@ -78,17 +80,30 @@ from nltk.corpus import stopwords
 stop_words = set(stopwords.words('english'))
 df_valid_words['text'] = df_valid_words['text'].apply(lambda x: ' '.join([word for word in x.split() if word.lower() not in stop_words]))
 
-# Get the top 6 most frequent words
-top_words = df_valid_words['text'].str.split().explode().value_counts().head(6).index
+# # Get the top 6 most frequent words
+# # top_words = df_valid_words['text'].str.split().explode().value_counts().head(6).index
+
+# # Create subplots
+# fig, axes = plt.subplots(3, 2, figsize=(20, 12))
+
+# for i, word in enumerate(top_words):
+#     ax = axes[i // 2, i % 2]
+#     df_valid_words[df_valid_words['text'].str.contains(word)]['text'].resample('M').count().plot(ax=ax, title=f'Frequency of "{word}" over time')
+
+# plt.savefig('/Users/joseph/GitHub/SFI_CGS_2024/code/eda/top_6_frequent_words_per_month.png', format='png')
+# plt.close()  # Close the fourth figure
+
+
+# Get the 2 words
+top_words = ['fear', 'fear']
 
 # Create subplots
-fig, axes = plt.subplots(3, 2, figsize=(20, 12))
+fig, axes = plt.subplots(1, 2, figsize=(20, 12))
 
 for i, word in enumerate(top_words):
     ax = axes[i // 2, i % 2]
     df_valid_words[df_valid_words['text'].str.contains(word)]['text'].resample('M').count().plot(ax=ax, title=f'Frequency of "{word}" over time')
 
-plt.savefig('/Users/joseph/GitHub/SFI_CGS_2024/code/eda/top_6_frequent_words_per_month.png', format='png')
+plt.savefig('/Users/joseph/GitHub/SFI_CGS_2024/code/eda/2words_per_month.png', format='png')
 plt.close()  # Close the fourth figure
-
 

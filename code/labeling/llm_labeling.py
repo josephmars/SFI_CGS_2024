@@ -4,8 +4,8 @@ import time
 from numpy import nan
 
 
-reddits_path = '/Users/joseph/GitHub/SFI_CGS_2024/data/all_reddits/filtered.csv' # Will be ignored if checkpoint is True
-filtered_path = '/Users/joseph/GitHub/SFI_CGS_2024/data/all_reddits/llm_validated_reddits_fewshot.xlsx' # Will be used as input if checkpoint is True
+reddits_path = '/Users/joseph/GitHub/SFI_CGS_2024/data/all_subreddits/filtered.csv' # Will be ignored if checkpoint is True
+filtered_path = '/Users/joseph/GitHub/SFI_CGS_2024/data/all_reddits/llm_validated_reddits_with_false_negatives.xlsx' # Will be used as input if checkpoint is True
 examples_path = '/Users/joseph/GitHub/SFI_CGS_2024/code/labeling/examples.txt'
 checkpoint = True
 
@@ -81,6 +81,7 @@ def run_llm_validation(logging=100, exporting=300, resting=300, rest_time=60):
             reddits['valid'] = "NaN"
             
         start_time = time.time()
+        n_labeled = 0
         for index, row in reddits.iterrows():
             reddit_text = str(row['text'])
             empty = True
@@ -89,12 +90,12 @@ def run_llm_validation(logging=100, exporting=300, resting=300, rest_time=60):
                 empty = False
                 output = llm_labeling_validation(reddit_text, max_retries=0)
                 reddits.at[index, 'valid'] = output
-    
-                
+                n_labeled += 1
+            
             if index % logging == 0 and not empty: # Log the progress
                 elapsed_time = time.time() - start_time
-                excepted_time = (elapsed_time/(index+1)) * len(reddits)
-                print(f"Processed {index}/{len(reddits)} rows in {elapsed_time/60:.2f} minutes, expected {excepted_time/60:.2f} minutes remaining.")
+                expected_time = (elapsed_time/(n_labeled)) * (len(reddits)-index)
+                print(f"Processed {index}/{len(reddits)} rows in {elapsed_time/60:.2f} minutes, expected {expected_time/60:.2f} minutes remaining.")
             if index % exporting == 0 and index != 0 and not empty: # Export the data checkpoint 
                 export(reddits, filtered_path)
                 print(f"Exported {index} rows to {filtered_path}")
