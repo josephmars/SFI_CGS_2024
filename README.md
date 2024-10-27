@@ -25,7 +25,42 @@ Use the files from this [repository](https://github.com/Watchful1/PushshiftDumps
       6. Use `get_sample.py` to get a sample of the data either by month or by subreddit (proportionally).
 
 ## Results
-  1. Number of reddits that matches the query on the 10 subreddits from 2022-07 to 2024-07: `7,616,585` !!! WRONG!!!
+  1. Number of reddits that matches the query on the 10 subreddits from 2022-07 to 2024-07: `7,616,585`
+  2. Number of reddits that matches the query on the 1o subreddits and was labeled by Llama 3.1 7B: `18,159`.
+  3. We manually labeled 555 with multilabel classification for 3 categories or levels below. From the labeling, we identified that 67 are in level C1, 192 in level C2, and 80 in level C3.
+     1. The post talks about task-oriented thoughts, like a new summarization model.
+     2. Worker-oriented, meaning how a worker might have been impacted in its work environment.
+     3. Workforce, meaning that it affects a huge amount of workers in a specific sector or in general.
+
+## Models training
+We trained the models SVM and Random Forest. The models and results are in the `code/analysis/models/` folder. Training results (also in the `analysis.docx` file):
+| Random Forest | Precision | Recall | F1-Score | Support |
+| C1 Work | 1.00 | 0.10 | 0.18 | 10 |
+| C2 Worker | 0.61 | 0.33 | 0.43 | 33 |
+| C3 Workforce | 0.00 | 0.00 | 0.00 | 16 |
+
+| SVM | Precision | Recall | F1-Score | Support |
+| C1 Work | 0.00 | 0.00 | 0.00 | 10 |
+| C2 Worker | 0.69 | 0.27 | 0.39 | 33 |
+| C3 Workforce | 0.50 | 0.12 | 0.20 | 16 |
+
+Number of posts predicted per category and model:
+| Category | Random Forest | SVM |
+| C1 Work | 0 | 10 |
+| C2 Worker | 920 | 942 |
+| C3 Workforce | 7 | 61 |
+
+Considering that for both models the number of posts predicted for C1 and C3 are very low, we decided to use only C2 for the next steps. This is also reflected in the table of performances where Random Forest struggles with C1 and C3, and SVM with C2. Since the F-1 score for the C2 is higher for Random Forest, we decided to use that model for the analysis.
+
+Topic modeling was done using LDA for 4 datasets:
+- Raw data
+- Predicted data
+- Raw data with C2 Worker
+- Predicted data with C2 Worker
+The results of the topic modeling are in the `code/analysis/topic_modeling/` folder. The visualizations are in the `plots/` folder. The equations of the topics are in the `equations.txt` file. And the interpretations of the topics are in the analysis file `code/analysis/analysis.docx`.
+
+
+
 
 
 ## Meetings

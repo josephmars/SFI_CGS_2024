@@ -1,7 +1,7 @@
 import pandas as pd
 import subprocess
 import time 
-from numpy import nan
+# from numpy import nan
 
 
 reddits_path = '/Users/joseph/GitHub/SFI_CGS_2024/data/all_subreddits/filtered.csv' # Will be ignored if checkpoint is True

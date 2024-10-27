@@ -4,13 +4,14 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from textblob import TextBlob
 import numpy as np
-import nltk
-nltk.download('stopwords')
+# import nltk
+# nltk.download('stopwords')
+from nltk.corpus import stopwords
 
 # Load the data
 df = pd.read_excel('/Users/joseph/GitHub/SFI_CGS_2024/data/all_reddits/llm_validated_reddits_fewshot.xlsx')
 
-df_valid = df[df['valid'] == True]
+df_valid = df[df['valid']]
 
 df_valid.to_excel('/Users/joseph/GitHub/SFI_CGS_2024/data/all_reddits/llm_validated_reddits_fewshot_valid.xlsx', index=False)
 
@@ -76,7 +77,6 @@ df_valid_words['date'] = pd.to_datetime(df_valid_words['date'])
 df_valid_words.set_index('date', inplace=True)
 
 # Remove stop words
-from nltk.corpus import stopwords
 stop_words = set(stopwords.words('english'))
 df_valid_words['text'] = df_valid_words['text'].apply(lambda x: ' '.join([word for word in x.split() if word.lower() not in stop_words]))
 

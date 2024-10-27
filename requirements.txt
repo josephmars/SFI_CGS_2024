@@ -9,3 +9,5 @@ zstandard
 openpyxl
 torch
 transformers
+nltk
+gensim

@@ -1,0 +1,27 @@
+Top 5 topics for C1 Work:
+(0, '0.008*"ai" + 0.005*"could" + 0.003*"people" + 0.003*"use" + 0.003*"going" + 0.003*"’" + 0.003*"interview" + 0.003*"technology" + 0.003*"word" + 0.003*"manager"')
+(1, '0.024*"ai" + 0.012*"job" + 0.006*"potential" + 0.006*"article" + 0.006*"human" + 0.006*"also" + 0.005*"work" + 0.005*"use" + 0.004*"dont" + 0.004*"even"')
+(2, '0.013*"job" + 0.011*"human" + 0.011*"ai" + 0.007*"company" + 0.006*"laundry" + 0.006*"work" + 0.005*"get" + 0.005*"could" + 0.004*"software" + 0.004*"writing"')
+(3, '0.011*"ai" + 0.011*"’" + 0.008*"human" + 0.008*"travel" + 0.008*"like" + 0.006*"llm" + 0.006*"idea" + 0.006*"something" + 0.006*"amp" + 0.005*"question"')
+(4, '0.028*"ai" + 0.017*"job" + 0.010*"people" + 0.009*"’" + 0.007*"new" + 0.006*"work" + 0.006*"think" + 0.005*"like" + 0.005*"way" + 0.005*"even"')
+--------------------------------
+Top 5 topics for C2 Worker:
+(0, '0.025*"ai" + 0.025*"art" + 0.017*"artist" + 0.014*"’" + 0.009*"like" + 0.007*"human" + 0.007*"people" + 0.006*"think" + 0.006*"artwork" + 0.005*"even"')
+(1, '0.027*"ai" + 0.025*"job" + 0.016*"people" + 0.009*"like" + 0.009*"human" + 0.008*"’" + 0.007*"work" + 0.007*"new" + 0.006*"im" + 0.006*"year"')
+(2, '0.021*"ai" + 0.017*"job" + 0.010*"’" + 0.008*"career" + 0.007*"im" + 0.007*"work" + 0.006*"year" + 0.006*"like" + 0.005*"article" + 0.005*"time"')
+(3, '0.013*"would" + 0.006*"copyright" + 0.005*"bootcamps" + 0.005*"wont" + 0.004*"robot" + 0.004*"amount" + 0.004*"use" + 0.004*"income" + 0.003*"industry" + 0.003*"reason"')
+(4, '0.011*"happens" + 0.007*"ai" + 0.006*"art" + 0.005*"would" + 0.005*"im" + 0.004*"field" + 0.003*"content" + 0.003*"one" + 0.003*"question" + 0.003*"u"')
+--------------------------------
+Top 5 topics for C3 Workforce:
+(0, '0.024*"ai" + 0.021*"job" + 0.016*"’" + 0.014*"would" + 0.009*"people" + 0.008*"human" + 0.007*"work" + 0.007*"company" + 0.006*"new" + 0.006*"need"')
+(1, '0.027*"ai" + 0.017*"job" + 0.013*"people" + 0.007*"human" + 0.007*"even" + 0.006*"like" + 0.006*"work" + 0.005*"would" + 0.005*"make" + 0.004*"’"')
+(2, '0.020*"ai" + 0.015*"job" + 0.013*"art" + 0.012*"people" + 0.008*"human" + 0.007*"think" + 0.007*"like" + 0.006*"work" + 0.005*"automation" + 0.005*"going"')
+(3, '0.011*"agi" + 0.008*"ai" + 0.007*"translation" + 0.006*"general" + 0.006*"translator" + 0.005*"people" + 0.005*"like" + 0.005*"intelligence" + 0.004*"artificial" + 0.004*"im"')
+(4, '0.015*"people" + 0.009*"work" + 0.009*"ai" + 0.009*"collar" + 0.007*"job" + 0.006*"like" + 0.005*"day" + 0.005*"white" + 0.005*"lot" + 0.004*"would"')
+--------------------------------
+Top 5 topics for predicted C2 Worker:
+(0, '0.043*"ai" + 0.025*"job" + 0.016*"people" + 0.012*"like" + 0.011*"im" + 0.011*"’" + 0.008*"think" + 0.008*"year" + 0.008*"future" + 0.007*"dont"')
+(1, '0.038*"art" + 0.027*"ai" + 0.021*"artist" + 0.015*"human" + 0.010*"image" + 0.010*"’" + 0.008*"make" + 0.008*"model" + 0.007*"way" + 0.006*"people"')
+(2, '0.012*"manager" + 0.009*"motivation" + 0.009*"interaction" + 0.008*"£" + 0.007*"medical" + 0.006*"team" + 0.005*"english" + 0.005*"startup" + 0.005*"forward" + 0.005*"scientist"')
+(3, '0.027*"ai" + 0.010*"data" + 0.008*"learning" + 0.008*"intelligence" + 0.006*"experience" + 0.006*"development" + 0.006*"ethical" + 0.006*"field" + 0.006*"tool" + 0.006*"potential"')
+(4, '0.032*"human" + 0.012*"robot" + 0.010*"suffer" + 0.010*"million" + 0.009*"population" + 0.008*"fathom" + 0.008*"qc" + 0.008*"income" + 0.007*"physical" + 0.007*"code"')
