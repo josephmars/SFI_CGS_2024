@@ -23,4 +23,4 @@ code/bertopic_model
 *.ldf
 
 # MacOS files
-.DS_Store
+*.DS_Store
