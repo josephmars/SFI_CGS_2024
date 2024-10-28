@@ -103,3 +103,11 @@ One can use a principle of scale in Biology and apply it into companies, countri
 In the case of a company:
 log(assets) would be the x; and log(liability), revenue, would be the y variable.
 
+**TODO**:
+- TODO: Update the analysis text
+  - Difference between automatica and manual labeling
+  - Add "labeled reddits with more than 10 in score"
+  - Remove "special emphasis on ChatGPT"
+  - Add more details on the topic modeling results (get interpretations from ChatGPT)
+- Add plot of average score by month
+- Create an Excel document with the topic of each reddit. (Increase number of topics for predicted C2 Worker)
