@@ -26,7 +26,7 @@ Use the files from this [repository](https://github.com/Watchful1/PushshiftDumps
 
 ## Results
   1. Number of reddits that matches the query on the 10 subreddits from 2022-07 to 2024-07: `7,616,585`
-  2. Number of reddits that matches the query on the 1o subreddits and was labeled by Llama 3.1 7B: `18,159`.
+  2. Number of reddits that matches the query on the 10 subreddits and was labeled by Llama 3.1 7B: `18,159`.
   3. We manually labeled 555 with multilabel classification for 3 categories or levels below. From the labeling, we identified that 67 are in level C1, 192 in level C2, and 80 in level C3.
      1. The post talks about task-oriented thoughts, like a new summarization model.
      2. Worker-oriented, meaning how a worker might have been impacted in its work environment.
@@ -102,12 +102,3 @@ https://kumu.io/
 One can use a principle of scale in Biology and apply it into companies, countries, etc. We need to define the variables like mass.
 In the case of a company:
 log(assets) would be the x; and log(liability), revenue, would be the y variable.
-
-**TODO**:
-- TODO: Update the analysis text
-  - Difference between automatica and manual labeling
-  - Add "labeled reddits with more than 10 in score"
-  - Remove "special emphasis on ChatGPT"
-  - Add more details on the topic modeling results (get interpretations from ChatGPT)
-- Add plot of average score by month
-- Create an Excel document with the topic of each reddit. (Increase number of topics for predicted C2 Worker)

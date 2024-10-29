@@ -11,9 +11,10 @@ import pyLDAvis
 import pyLDAvis.gensim_models
 from nltk.corpus import stopwords
 
+# Uncomment the following lines if you haven't downloaded these NLTK resources
 # nltk.download('stopwords')
 # nltk.download('wordnet')
-# nltk.download('punkt_tab')
+# nltk.download('punkt')
 
 def preprocess_text(text):
     # Lowercase
@@ -49,7 +50,7 @@ def topic_modeling():
 
     for level_name, level_column in levels.items():
         print(f"\nProcessing category: {level_name}")
-        # Filter rows where the specific level column is 1
+        # Filter rows where the specific level column is True
         df_level = df_labeled[df_labeled[level_column] == True].copy()
 
         # Preprocess the text data
@@ -83,11 +84,31 @@ def topic_modeling():
         # Optional: Save the model and dictionary
         lda_model.save(f'/Users/joseph/GitHub/SFI_CGS_2024/code/analysis/topic_modeling/models/{level_name.replace(" ", "_")}_lda_model.gensim')
         dictionary.save(f'/Users/joseph/GitHub/SFI_CGS_2024/code/analysis/topic_modeling/models/{level_name.replace(" ", "_")}_dictionary.gensim')
-        
+
         # Export to HTML using pyLDAvis
         vis = pyLDAvis.gensim_models.prepare(lda_model, corpus, dictionary)
-        
         # Save the visualization to an HTML file
         pyLDAvis.save_html(vis, f'/Users/joseph/GitHub/SFI_CGS_2024/code/analysis/topic_modeling/plots/{level_name.replace(" ", "_")}_lda_vis.html')
+
+        # Assign the dominant topic to each document
+        dominant_topics = []
+        for i, corp in enumerate(corpus):
+            # Get the topic distribution for the document
+            topics_per_document = lda_model.get_document_topics(corp, minimum_probability=0.0)
+            # Sort the topics by probability
+            sorted_topics = sorted(topics_per_document, key=lambda x: x[1], reverse=True)
+            # Get the dominant topic
+            dominant_topic = sorted_topics[0][0]
+            # Since topic numbering starts from 0, add 1
+            dominant_topics.append(dominant_topic + 1)
+
+        # Add the dominant topic to the DataFrame
+        df_level['Dominant_Topic'] = dominant_topics
+
+        # Save the DataFrame to an Excel file
+        output_path = f'/Users/joseph/GitHub/SFI_CGS_2024/data/predictions/reddits_with_topics_{level_name.replace(" ", "_")}.xlsx'
+        df_level.to_excel(output_path, index=False)
+        print(f"Data with dominant topics saved to {output_path}")
+
 if __name__ == '__main__':
     topic_modeling()
