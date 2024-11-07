@@ -60,7 +60,11 @@ Topic modeling was done using LDA for 4 datasets:
 The results of the topic modeling are in the `code/analysis/topic_modeling/` folder. The visualizations are in the `plots/` folder. The equations of the topics are in the `equations.txt` file. And the interpretations of the topics are in the analysis file `code/analysis/analysis.docx`.
 
 
-
+## TODO (From meeting with Ignacio)
+- [ ] Improve the lemmatization, reduction stopwords, etc.
+- [ ] Check the error (BIC, AIC) depending on the number of topics, because some of them can be merged together.
+- [ ] Tokenize using bigrams and trigrams, it could help to understand the topics better.
+- [ ] Writing: Add the selection of the hyperparameters of the models
 
 
 ## Meetings
