@@ -28,3 +28,5 @@ code/bertopic_model
 # Additional files
 docs/
 documents/
+*.html
+*.ipynb
