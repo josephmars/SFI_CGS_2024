@@ -28,7 +28,7 @@
   - [Future Work](#future-work)
   
 ## Overview
-This project involves extracting data from Reddit, preprocessing it, and analyzing it using machine learning models to understand discussions around AI and employment. The analysis includes data collection, preprocessing, model training, and topic modeling. 
+This project involves extracting data (more than 2TB) from Reddit, preprocessing it, and analyzing it using machine learning models to understand discussions around AI and employment. The analysis includes data collection, preprocessing, model training, and topic modeling. It was done using the Old Dominion University HPC.
 This project was part of the [SFI CGS 2024](https://www.sfi.ie/cgs/cgs-2024/) project.
 
 
@@ -46,7 +46,8 @@ This project was part of the [SFI CGS 2024](https://www.sfi.ie/cgs/cgs-2024/) pr
 - Due to API limitations, we used the Reddit data archive accessible via torrents.
 - Data spans from 2005 to 2023, focusing on posts from July 2022 to July 2024.
 - Downloaded using academic torrents and processed using scripts from the PushshiftDumps repository.
-
+- Total number of posts extracted: **7,616,585.**
+- 
 #### Subreddits and Queries
 - Subreddits: anti-work, AskReddit, careerguidance, changemyview, Economics, Futurology, jobs, NoStupidQuestions, Showerthoughts, technology.
 - Query: Filtered posts discussing AI's impact on jobs.
