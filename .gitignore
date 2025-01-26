@@ -24,3 +24,6 @@ code/bertopic_model
 
 # MacOS files
 *.DS_Store
+
+# Additional files
+docs/
