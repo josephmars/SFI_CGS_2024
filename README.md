@@ -1,11 +1,13 @@
-# Reddit Data Analysis Project - SFI CGS 2024 
+<img src="assets/images/thumbnail.png" width="100%">
+
+# Reddit Data Analysis Project for SFI Complexity Global School 2024 
 
 <div align="center">
 <img src="https://avatars.githubusercontent.com/u/19215004?s=200&v=4" alt="Reddit Logo" width="200">
 </div>
 
 ### Table of Contents
-- [Reddit Data Analysis Project - SFI CGS 2024](#reddit-data-analysis-project---sfi-cgs-2024)
+- [Reddit Data Analysis Project for SFI Complexity Global School 2024](#reddit-data-analysis-project-for-sfi-complexity-global-school-2024)
     - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
   - [Methodology](#methodology)
