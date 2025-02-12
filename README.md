@@ -21,6 +21,7 @@
     - [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
     - [Topic Modeling](#topic-modeling)
   - [Results and Findings](#results-and-findings)
+  - [Read Report](#read-report)
   - [Usage](#usage)
     - [Get data form Reddit API](#get-data-form-reddit-api)
     - [Download data and upload to HPC](#download-data-and-upload-to-hpc)
@@ -93,6 +94,8 @@ This project was part of the [SFI CGS 2024](https://www.sfi.ie/cgs/cgs-2024/) pr
 - Discussions on human vs. AI creativity, especially in art.
 - Ethical and societal considerations are significant topics.
 
+## Read Report
+📄 [Human Agency in Automated Futures](docs/Human%20agency%20in%20automated%20futures.pdf) - Full research report detailing methodology, findings, and conclusions.
 
 ##  Usage
 ### Get data form Reddit API

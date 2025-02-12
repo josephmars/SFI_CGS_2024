@@ -26,7 +26,6 @@ code/bertopic_model
 *.DS_Store
 
 # Additional files
-docs/
 documents/
 *.html
 *.ipynb
